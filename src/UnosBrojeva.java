@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,16 +27,9 @@ public class UnosBrojeva {
         if (brojevi.isEmpty()) {
             System.out.println("Nema unesenih brojeva.");
         } else {
-            int min = brojevi.getFirst();
-            int max = brojevi.getFirst();
-            for (int b : brojevi) {
-                if (b < min) {
-                    min = b;
-                }
-                if (b > max) {
-                    max = b;
-                }
-            }
+            int min = Collections.min(brojevi);
+            int max = Collections.max(brojevi);
+
             System.out.println("Najmanji uneseni broj: " + min);
             System.out.println("Najveci uneseni broj: " + max);
         }
